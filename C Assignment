@@ -1,1 +1,81 @@
+#include <stdio.h>
+#include <math.h>   // For library functions like sqrt()
 
+// --------------- USER DEFINED FUNCTION EXAMPLE ---------------
+void greet() {  
+    printf("\nHello, welcome to C programming!\n");
+}
+
+int main() {
+
+    // ----------- 1️⃣ ARRAY EXAMPLE -----------
+    int marks[5] = {90, 80, 85, 70, 95};  // Declaration + initialization of array
+    printf("1. Array Example:\n");
+    printf("First mark = %d\n", marks[0]);  // Accessing first element
+
+
+    // ----------- 2️⃣ FUNCTION EXAMPLES -----------
+
+    // Library function example
+    printf("\n2. Function Examples:\n");
+    printf("Square root of 16 is %.2f\n", sqrt(16)); // Library function
+
+    // User-defined function call
+    greet();
+
+
+    // ----------- 3️⃣ POINTER EXAMPLE -----------
+    int num = 10;
+    int *ptr;     // Declaration of pointer
+    ptr = &num;   // Initialization with address of num
+
+    printf("\n3. Pointer Example:\n");
+    printf("Value of num = %d\n", num);
+    printf("Address of num = %p\n", ptr);
+    printf("Value using pointer = %d\n", *ptr);
+
+
+    // ----------- 4️⃣ TYPES OF ARRAYS -----------
+    printf("\n4. Types of Arrays:\n");
+
+    // 1D Array
+    int arr1D[3] = {1, 2, 3};
+    printf("1D Array Elements: ");
+    for(int i=0; i<3; i++) {
+        printf("%d ", arr1D[i]);
+    }
+
+    // 2D Array
+    int arr2D[2][2] = {{1, 2}, {3, 4}};
+    printf("\n2D Array Elements:\n");
+    for(int i=0; i<2; i++) {
+        for(int j=0; j<2; j++) {
+            printf("%d ", arr2D[i][j]);
+        }
+        printf("\n");
+    }
+
+
+    // ----------- 5️⃣ TYPES OF OPERATORS -----------
+    printf("\n5. Types of Operators:\n");
+
+    int a = 10, b = 5;
+
+    // Arithmetic Operators
+    printf("Arithmetic: a+b=%d, a-b=%d, a*b=%d, a/b=%d\n", a+b, a-b, a*b, a/b);
+
+    // Relational Operators
+    printf("Relational: (a>b)=%d, (a<b)=%d\n", (a>b), (a<b));
+
+    // Logical Operators
+    printf("Logical: (a>b && a!=b)=%d, (a<b || a==b)=%d\n", (a>b && a!=b), (a<b || a==b));
+
+    // Assignment Operator
+    int c = a;  
+    printf("Assignment: c=%d\n", c);
+
+    // Increment / Decrement Operators
+    printf("Increment: a++=%d, Decrement: b--=%d\n", a++, b--);
+
+    return 0;
+}
